@@ -16,7 +16,7 @@
                 <img src="{{ data.Image.url }}" alt="Blog content">
             </div>
             <div class="content">
-                <a href="{% url 'Article:details' content=data.slug %}" target="_self"><h2>{{ data.title }}</h2></a>
+                <a href="{% url 'Article:details' content=data.slug %}" target="_self"><h2 title="View more">{{ data.title }}</h2></a>
             </div>
             <div class="content">
                 <p>{{ data.taste_snippet }} .....</p>

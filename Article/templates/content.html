@@ -29,8 +29,12 @@
        <a href="{% url 'Article:update' Details.id %}" class="btn">Update</a>
        <a href="{% url 'Article:delete' Details.id %}" class="btn btn-danger">Delete</a>
    {% endif %}
+   
 </div>
 
 </div>
+<footer><p>&copy; {{Details.Creation_date|date:"Y"}} My Blog. All rights reserved.</p>
+    <p>Created by <span style="font-weight: bold;color: #007bff;">{{ Details.Author }}</span></p>
+</footer>
 
 {% endblock content %}

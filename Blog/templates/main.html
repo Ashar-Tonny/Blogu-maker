@@ -16,7 +16,7 @@
             </div>
             <div class="account-nav">
                 {% if user.is_authenticated %}
-                    <span class="user-welcome">Hello, {{ user.username }}</span>
+                    <span style="font-weight: bold;color: #007bff;">Hello: {{ user.username|title }} </span>
                     <a class="btn" href="{% url 'Accounts:logout' %}">Logout</a>
                 {% else %}
                     <a class="btn" href="{% url 'Accounts:logger' %}">Login</a>
