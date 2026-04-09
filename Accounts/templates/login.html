@@ -1,0 +1,23 @@
+{% extends 'main.html' %}
+{% block title %}Article{% endblock title %}
+
+{% block content %}
+
+<div class="sub-container" >  
+
+    <div class = "forms">
+<form action="{% url 'Accounts:logger' %}" method="POST">
+    {% csrf_token %}
+    {% if request.GET.next %}
+     <input type="hidden" name="next" value="{{ request.GET.next }}">
+     {% endif %}
+
+     {{ Log_form.as_p }}
+    <input type="submit" class="btn" value="Login">
+    <p>You don't have an account?<a href="{% url 'Accounts:Register' %}" target="_self">Register</a></p>
+</form>
+</div>
+
+</div>
+
+{% endblock content %}

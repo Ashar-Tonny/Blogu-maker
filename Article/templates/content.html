@@ -1,0 +1,36 @@
+{% extends 'main.html' %}
+
+
+{% block title %} {{Details.title }} {% endblock title %}
+
+
+{% block content %}
+
+<div class="sub-container" >  
+
+
+
+<div class="content_img">
+    <img src=" {{ Details.Image.url }} " alt="Blog content">
+</div>
+
+
+<div class="content">
+<h2 id="h2">{{ Details.title }}</h2>
+</div>
+
+
+<div class="content">
+   {{ Details.body|linebreaks }}
+</div>
+
+<div class="footer">
+   {% if user.is_authenticated %}
+       <a href="{% url 'Article:update' Details.id %}" class="btn">Update</a>
+       <a href="{% url 'Article:delete' Details.id %}" class="btn btn-danger">Delete</a>
+   {% endif %}
+</div>
+
+</div>
+
+{% endblock content %}

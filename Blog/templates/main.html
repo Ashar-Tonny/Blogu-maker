@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "{% static 'styles.css' %}">
+    <link rel="icon" type="image/png" href={% static 'icon.png' %}>
+    <title>{% block title %}{% endblock title %}</title>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="home">
+                <a href="{% url 'Article:home' %}"><h1><p style="text-decoration: none;"><img src="{% static 'icon.png' %}" alt="Cookies" style="width: 20%;height:auto;" >Home</p></h1></a>
+            </div>
+            <div class="account-nav">
+                {% if user.is_authenticated %}
+                    <span class="user-welcome">Hello, {{ user.username }}</span>
+                    <a class="btn" href="{% url 'Accounts:logout' %}">Logout</a>
+                {% else %}
+                    <a class="btn" href="{% url 'Accounts:logger' %}">Login</a>
+                    <a class="btn" href="{% url 'Accounts:Register' %}">Register</a>
+                {% endif %}
+            </div>
+        </nav>
+        {% block content %}
+        {% endblock content %}
+
+    </div>
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>

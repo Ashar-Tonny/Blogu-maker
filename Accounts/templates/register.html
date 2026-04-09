@@ -1,0 +1,20 @@
+{% extends 'main.html' %}
+{% block title %}Article{% endblock title %}
+
+{% block content %}
+
+<div class="sub-container" >  
+
+    <div class = "forms">
+<form action="{% url 'Accounts:Register' %}" method="POST">
+ {% csrf_token %}
+    {{ Reg.as_p }}
+    <input type="submit" class="btn" value="Register">
+    <p>You already have an account?<a href="{% url 'Accounts:logger' %}" target="_self">Login</a></p>
+
+</form>
+</div>  
+
+</div>
+
+{% endblock content %}

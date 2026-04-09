@@ -1,0 +1,20 @@
+{% extends 'main.html' %}
+{% block title %}Article{% endblock title %}
+
+{% block content %}
+
+<div class="sub-container" >  
+    <div class="forms">
+
+    <form action="{% url 'Article:update' index %}" method="POST" enctype="multipart/form-data" id="adder">
+        {% csrf_token %}
+
+        {{ Form.as_p }}
+<input type="submit" value="Save" class="btn">
+<a href="{% url 'Article:details' Details.slug %}" class="btn">Cancel</a>
+    </form>
+</div>
+    
+</div>
+
+{% endblock content %}

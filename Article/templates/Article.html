@@ -1,0 +1,47 @@
+{% extends 'main.html' %}
+{% block title %}Article{% endblock title %}
+
+{% block content %}
+
+<div class="sub-container">
+    {% if user.is_authenticated %}
+        <div class="add-article-link">
+            <a href="{% url 'Article:add' %}" class="btn">Add New Article</a>
+        </div>
+    {% endif %}
+
+    {% for data in Data %}
+        <div class="Article-card">
+            <div class="content_img">
+                <img src="{{ data.Image.url }}" alt="Blog content">
+            </div>
+            <div class="content">
+                <a href="{% url 'Article:details' content=data.slug %}" target="_self"><h2>{{ data.title }}</h2></a>
+            </div>
+            <div class="content">
+                <p>{{ data.taste_snippet }} .....</p>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock content %}
+
+{% comment %}
+ 
+               use this    
+
+{% extends 'main.html' %}
+{% block title %}Article{% endblock title %}
+
+{% block content %}
+
+<div class="sub-container" >  
+
+
+    
+</div>
+
+{% endblock content %}
+
+{% endcomment %}
