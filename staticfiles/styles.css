@@ -1,0 +1,258 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #f8f9fa;
+    background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+}
+
+.container {
+    min-height: 100vh;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0;
+    margin-bottom: 18px;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+    text-decoration: none;
+}
+
+nav .home a h1 {
+    font-size: 1.9rem;
+    color: #38bdf8;
+    margin: 0;
+}
+
+nav .home a:hover h1 {
+    color: #22d3ee;
+}
+
+.sub-container {
+    background-color: rgba(15, 23, 42, 0.85);
+    border-radius: 12px;
+    padding: 24px;
+    margin: 16px 0;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.55);
+}
+
+.content_img {
+    margin-bottom: 14px;
+    text-align: center;
+}
+
+.content_img img {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid rgba(148, 163, 184, 0.3);
+}
+
+.content h2,
+#h2 {
+    margin: 12px 0 8px;
+    font-size: 2rem;
+    color: #7dd3fc;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+.content p,
+.content a,
+.content span,
+.content li {
+    color: #e2e8f0;
+    line-height: 1.65;
+}
+
+.content a {
+    text-decoration: none;
+    color: #38bdf8;
+}
+
+.content a:hover {
+    color: #0ea5e9;
+    text-decoration: underline;
+}
+
+.footer {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn,
+.btn-danger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.65rem 1.25rem;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn {
+    background-color: #38bdf8;
+    color: #0f172a;
+    border-color: #38bdf8;
+}
+
+.btn:hover {
+    background-color: #22d3ee;
+    transform: translateY(-1px);
+}
+
+.btn-danger {
+    background-color: #ef4444;
+    color: #fff;
+    border-color: #ef4444;
+}
+
+.btn-danger:hover {
+    background-color: #dc2626;
+    transform: translateY(-1px);
+}
+
+a {
+    color: #38bdf8;
+}
+
+a:hover {
+    color: #22d3ee;
+}
+
+.forms {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+    max-width: 520px;
+    background-color: rgba(226, 232, 240, 0.05);
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+form label {
+    color: #93c5fd;
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+}
+
+form input,
+form textarea,
+form select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid rgba(148, 163, 184, 0.5);
+    border-radius: 8px;
+    background-color: #0f172a;
+    color: #e2e8f0;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+    border-color: #38bdf8;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.25);
+}
+
+form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+form input[type='submit'],
+form button[type='submit'] {
+    width: fit-content;
+    align-self: flex-start;
+}
+
+#adder {
+    width: 100%;
+}
+
+#adder input {
+    width: 100%;
+}
+
+.Article-card {
+    background-color: rgba(15, 23, 42, 0.75);
+    border: 1px solid rgba(148, 163, 184, 0.3);
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.Article-card h2 {
+    margin-top: 0;
+    font-size: 1.35rem;
+}
+
+.helptext {
+    color: #94a3b8;
+    font-style: italic;
+}
+
+.helptext ul {
+    padding-left: 1rem;
+    list-style-type: disc;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 14px;
+    }
+
+    .sub-container,
+    form {
+        padding: 16px;
+    }
+
+    .content_img img {
+        max-width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
